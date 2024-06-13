@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix Time</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="unix-time"></div>
+
+    <script>
+        function updateUnixTime() {
+            const unixTimeElement = document.getElementById('unix-time');
+            const currentUnixTime = Math.floor(Date.now() / 1000);
+            unixTimeElement.textContent = currentUnixTime;
+        }
+
+        setInterval(updateUnixTime, 1000);
+        updateUnixTime();
+    </script>
+</body>
+
+</html>
